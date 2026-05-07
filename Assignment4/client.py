@@ -8,7 +8,7 @@ from utils import get_model_weights, set_model_weights
 
 SERVER_URL = "http://127.0.0.1:5000"
 
-# Dummy local dataset
+
 def get_local_data():
     X = np.random.rand(100, 10)
     y = np.random.randint(0, 2, 100)
@@ -21,7 +21,7 @@ def train_local_model():
 
     X, y = get_local_data()
 
-    for epoch in range(3):  # local epochs
+    for epoch in range(3):
         optimizer.zero_grad()
         outputs = model(X)
         loss = criterion(outputs, y)
